@@ -1,0 +1,5 @@
+C:\Users\ricar\OneDrive\Documents\BYU Pathway\cse325\W01 Assignment\FirstCSharpCode\bin\Release\net10.0\publish\FirstCSharpCode.exe
+C:\Users\ricar\OneDrive\Documents\BYU Pathway\cse325\W01 Assignment\FirstCSharpCode\bin\Release\net10.0\publish\FirstCSharpCode.dll
+C:\Users\ricar\OneDrive\Documents\BYU Pathway\cse325\W01 Assignment\FirstCSharpCode\bin\Release\net10.0\publish\FirstCSharpCode.deps.json
+C:\Users\ricar\OneDrive\Documents\BYU Pathway\cse325\W01 Assignment\FirstCSharpCode\bin\Release\net10.0\publish\FirstCSharpCode.runtimeconfig.json
+C:\Users\ricar\OneDrive\Documents\BYU Pathway\cse325\W01 Assignment\FirstCSharpCode\bin\Release\net10.0\publish\FirstCSharpCode.pdb
