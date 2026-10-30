@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\02_FirstCSharpCode\\FirstCSharpCode.csproj": {}
+    "C:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\FirstCSharpCode\\FirstCSharpCode.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\02_FirstCSharpCode\\FirstCSharpCode.csproj": {
+    "C:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\FirstCSharpCode\\FirstCSharpCode.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\02_FirstCSharpCode\\FirstCSharpCode.csproj",
+        "projectUniqueName": "C:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\FirstCSharpCode\\FirstCSharpCode.csproj",
         "projectName": "FirstCSharpCode",
-        "projectPath": "c:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\02_FirstCSharpCode\\FirstCSharpCode.csproj",
+        "projectPath": "C:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\FirstCSharpCode\\FirstCSharpCode.csproj",
         "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\02_FirstCSharpCode\\obj\\",
+        "outputPath": "C:\\Users\\ricar\\OneDrive\\Documents\\BYU Pathway\\cse325\\W01 Assignment\\FirstCSharpCode\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config"

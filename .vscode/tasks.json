@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+            "label": "build DotNetDebugging",
+            "type": "process",
+            "command": "dotnet",
+            "args": [
+                "build",
+                "${workspaceFolder}/W01 Assignment/DotNetDebugging/DotNetDebugging.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+		}
+	]
+}
