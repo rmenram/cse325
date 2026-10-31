@@ -30,11 +30,6 @@ Here are the exact details for each HTTP request sent and response received duri
       "id": 2,
       "name": "Veggie",
       "isGlutenFree": true
-    },
-    {
-      "id": 3,
-      "name": "Hawaii",
-      "isGlutenFree": false
     }
   ]
   ```
