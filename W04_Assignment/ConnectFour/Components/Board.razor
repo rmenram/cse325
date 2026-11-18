@@ -1,13 +1,21 @@
 @using System.Drawing
 @inject GameState State
 <h3>Board</h3>
+<h4>Running Score</h4>
+<h5>@scoreMessage</h5>
 <HeadContent>
     <style>
-        :root {
-            --board-bg: @ColorTranslator.ToHtml(BoardColor);
-            --player1: @ColorTranslator.ToHtml(Player1Color);
-            --player2: @ColorTranslator.ToHtml(Player2Color);
-        }
+            :root {
+                --board-bg:
+                    @ColorTranslator.ToHtml(BoardColor)
+                ;
+                --player1:
+                    @ColorTranslator.ToHtml(Player1Color)
+                ;
+                --player2:
+                    @ColorTranslator.ToHtml(Player2Color)
+                ;
+            }
     </style>
 </HeadContent>
 <nav>
@@ -41,9 +49,19 @@
     private string[] pieces = new string[42];
     private string winnerMessage = string.Empty;
     private string errorMessage = string.Empty;
+    private string scoreMessage = string.Empty;
 
     private string CurrentTurn => (winnerMessage == string.Empty) ? $"Player {State.PlayerTurn}'s Turn" : "";
     private string ResetStyle => (winnerMessage == string.Empty) ? "display: none;" : "";
+    private int player1Wins = 0;
+    private int player2Wins = 0;
+    private int player1Ties = 0;
+    private int player2Ties = 0;
+    private int player1Loses = 0;
+    private int player2Loses = 0;
+    private int player1Streak = 0; // => (winnerMessage == "Player 1 Wins!") ? 0 : player1Streak + 1;
+    private int player2Streak = 0; // => (winnerMessage == "Player 2 Wins!") ? 0 : player2Streak + 1;
+    private GameState.WinState lastWinner = GameState.WinState.No_Winner;
     private void PlayPiece(byte col)
     {
         errorMessage = string.Empty;
@@ -65,6 +83,31 @@
             GameState.WinState.Tie => "It's a tie!",
             _ => ""
         };
+        switch (State.CheckForWin())
+        {
+            case GameState.WinState.No_Winner:
+                break;
+            case GameState.WinState.Player1_Wins:
+                player1Wins++;
+                player1Streak++;
+                player2Loses++;
+                player2Streak = 0;
+                break;
+            case GameState.WinState.Player2_Wins:
+                player2Wins++;
+                player2Streak++;
+                player1Loses++;
+                player1Streak = 0;
+                break;
+            default:
+                player1Ties++;
+                player2Ties++;
+                player1Streak = 0;
+                player2Streak = 0;
+                break;
+        }
+        if (State.CheckForWin()!=GameState.WinState.No_Winner) 
+            DoScore();
     }
     [Parameter]
     public Color BoardColor { get; set; } = ColorTranslator.FromHtml("yellow");
@@ -77,6 +120,7 @@
     protected override void OnInitialized()
     {
         State.ResetBoard();
+        DoScore();
     }
     void ResetGame()
     {
@@ -84,5 +128,9 @@
         winnerMessage = string.Empty;
         errorMessage = string.Empty;
         pieces = new string[42];
+    }
+    void DoScore()
+    {
+        scoreMessage = $"P1: W{player1Wins}({player1Streak})-L{player1Loses}-T{player1Ties} | P2: W{player2Wins}({player2Streak})-L{player2Loses}-T{player2Ties}";
     }
 }
